@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { Col } from 'react-bootstrap'
+import Row from 'react-bootstrap/cjs/Row'
+import Comments from './Components/Comments/Comments'
+import MauinVideo from './Components/MainVideo/MauinVideo'
+import Suggestion from './Components/Suggestions/Suggestion'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+    return (
+        
+             <Row>
+    <Col  md={8}>
+        
+    <MauinVideo />
+           <Comments/>
+    </Col>
+    <Col md={4}>
+        <Suggestion/>
+    </Col>
+    </Row>
+    
+    
+    )
 }
 
-export default App;
+export default App
